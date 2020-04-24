@@ -27,27 +27,56 @@ const store = {
             correctAnswer: '2019'
         }
     ],
-    quizStarted: false,
-    questionNumber: 0,
-    score: 0
-};
 
-function render() {
-    $('main').html(<div id="container">
-        <p class="question">Question</p>
-        <div id="myDiv"></div>
-        <ul id="answerList">
-            <li>Answer1</li>
-            <li>Answer2</li>
-            <li>Answer3</li>
-            <li>Answer4</li>
-        </ul>
-        <button id="startButton">Start Quiz</button>
-    </div>)
+
+
+};
+let quizStarted = true;
+let questionNumber = 3;
+let score = 0;
+
+function startScreen() {
+    let html = '<section class=\'start-section\'> <h2>Do you know the fundamentals of web design?</h2> <button class=\'start - button\' type="button"> <span>Start</span> </button> </section>';
+    return html;
 }
 
-$(document).ready(function () {
-    render();
-});
+function quizScreen() {
+    let html = `<section class='question-section'> <div class='question-answer-container'> <!--question container--> <div class='question-container'> <h3 class='question'>Question</h3> </div>
 
+            <!--Answers container-->
+            <form class='answers-container'>
+                <input class='answer' type="radio" name='answer' value='0' required>Answer1<br />
+                <input class='answer' type="radio" name='answer' value='1' required>Answer2<br />
+                <input class='answer' type="radio" name='answer' value='2' required>Answer3<br />
+                <input class='answer' type="radio" name='answer' value='3' required>Answer4<br />
+            </form>
+        </div>
+    </section>`;
+    return html;
+}
 
+function endScreen() {
+    let html = `Michael Kier Blalock2:55 PM
+<div class='final-score-container'> <p>Final Score: ten out of ten</p> </div>`
+    return html;
+}
+
+function render() {
+    let Str = '';
+    if (quizStarted === false) {
+        Str = startScreen();
+        $('main').html(Str);
+    }
+
+    if (quizStarted === true && questionNumber > store.questions.length) {
+        Str = endScreen;
+        debugger;
+        $('main').html(Str);
+    }
+    else (quizStarted === true){
+        Str = quizScreen();
+        $('main').html(Str);
+    }
+}
+
+render();
