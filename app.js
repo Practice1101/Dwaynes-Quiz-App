@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Example store structure
  */
@@ -30,29 +32,22 @@ const store = {
     score: 0
 };
 
-/**
- *
- * Technical requirements:
- *
- * Your app should include a render() function, that regenerates the view each time the store is updated.
- * See your course material, consult your instructor, and reference the slides for more details.
- *
- * NO additional HTML elements should be added to the index.html file.
- *
- * You may add attributes (classes, ids, etc) to the existing HTML elements, or link stylesheets or additional scripts if necessary
- *
- * SEE BELOW FOR THE CATEGORIES OF THE TYPES OF FUNCTIONS YOU WILL BE CREATING 👇
- *
- */
+function render() {
+    $('main').html(<div id="container">
+        <p class="question">Question</p>
+        <div id="myDiv"></div>
+        <ul id="answerList">
+            <li>Answer1</li>
+            <li>Answer2</li>
+            <li>Answer3</li>
+            <li>Answer4</li>
+        </ul>
+        <button id="startButton">Start Quiz</button>
+    </div>)
+}
 
-/********** TEMPLATE GENERATION FUNCTIONS **********/
+$(document).ready(function () {
+    render();
+});
 
-// These functions return HTML templates
 
-/********** RENDER FUNCTION(S) **********/
-
-// This function conditionally replaces the contents of the <main> tag based on the state of the store
-
-/********** EVENT HANDLER FUNCTIONS **********/
-
-// These functions handle events (submit, click, etc)
