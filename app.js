@@ -39,25 +39,27 @@ function startScreen() {
     let html = '<section class=\'start-section\'> <h2>Do you know the fundamentals of web design?</h2> <button class=\'start - button\' type="button"> <span>Start</span> </button> </section>';
     return html;
 }
-
 function quizScreen() {
-    let html = `<section class='question-section'> <div class='question-answer-container'> <!--question container--> <div class='question-container'> <h3 class='question'>Question</h3> </div>
+    let html = `<section class='question-section'>
+                <div class='question-answer-container'> 
+                <!--question container--> <div class='question-container'> 
+                <h3 class='question'>Question</h3> </div>
 
-            <!--Answers container-->
-            <form class='answers-container'>
-                <input class='answer' type="radio" name='answer' value='0' required>Answer1<br />
-                <input class='answer' type="radio" name='answer' value='1' required>Answer2<br />
-                <input class='answer' type="radio" name='answer' value='2' required>Answer3<br />
-                <input class='answer' type="radio" name='answer' value='3' required>Answer4<br />
-            </form>
-        </div>
-    </section>`;
+                <!--Answers container-->
+                <form class='answers-container'>
+                    <input class='answer' type="radio" name='answer' value='0' required>Answer1<br />
+                    <input class='answer' type="radio" name='answer' value='1' required>Answer2<br />
+                    <input class='answer' type="radio" name='answer' value='2' required>Answer3<br />
+                    <input class='answer' type="radio" name='answer' value='3' required>Answer4<br />
+                </form>
+                </div>
+                </section>`;
     return html;
 }
-
 function endScreen() {
-    let html = `Michael Kier Blalock2:55 PM
-<div class='final-score-container'> <p>Final Score: ten out of ten</p> </div>`
+    let html = `<div class='final-score-container'> 
+                <p>Final Score: ten out of ten</p>
+                </div>`
     return html;
 }
 
@@ -73,7 +75,7 @@ function render() {
         debugger;
         $('main').html(Str);
     }
-    else (quizStarted === true){
+    else{
         Str = quizScreen();
         $('main').html(Str);
     }
