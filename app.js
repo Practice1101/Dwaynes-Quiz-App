@@ -23,10 +23,11 @@ const store = {
             correctAnswer: '2019'
         }
     ],
+    quizStarted: false,
+    questionNumber: 0,
+    score: 0,
+    
 };
-let quizStarted = false;
-let questionNumber = 0;
-let score = 0;
 
 function startScreen() {
     let html = `<h2>Do you know the fundamentals of web design?</h2> 
@@ -37,56 +38,65 @@ function startScreen() {
     return html;
 }
 function quizScreen() {
-    let pulledQuestion = store.questions[questionNumber].question;
-    let answer1 = store.questions[questionNumber].answers[0];
-    let answer2 = store.questions[questionNumber].answers[1];
-    let answer3 = store.questions[questionNumber].answers[2];
-    let answer4 = store.questions[questionNumber].answers[3];
+    let pulledQuestion = store.questions[store.questionNumber].question;
+    let answer1 = store.questions[store.questionNumber].answers[0];
+    let answer2 = store.questions[store.questionNumber].answers[1];
+    let answer3 = store.questions[store.questionNumber].answers[2];
+    let answer4 = store.questions[store.questionNumber].answers[3];
     let html = `<section class='question-section'>
-                <div class='question-answer-container'> 
+                    <div class='question-answer-container'> 
                 <!--question container--> <div class='question-container'> 
-                <h3 class='question'>${pulledQuestion}</h3> </div>
+                    <h3 class='question'>${pulledQuestion}</h3> </div>
 
                 <!--Answers container-->
-                <form class='answers-container' >
-                    <input class='answer' type="radio" name='answer' value='0' required>${answer1}<br />
-                    <input class='answer' type="radio" name='answer' value='1' required>${answer2}<br />
-                    <input class='answer' type="radio" name='answer' value='2' required>${answer3}<br />
-                    <input class='answer' type="radio" name='answer' value='3' required>${answer4}<br />
-                    <input type="submit" value = "Next Question">
-                    </form>
-                </div>
+                        <form class ='pickQuestion'>
+                            <button type="submit" id = '${answer1}'>${answer1}</button>
+                            <button type="submit" id = '${answer1}'>${answer1}</button>
+                            <button type="submit" id = '${answer1}'>${answer1}</button>
+                            <button type="submit" id = '${answer1}'>${answer1}</button>
+                        </form>
+                    </div>
                 </section>`;
     return html;
 }
 function endScreen() {
     let html = `<div class='final-score-container'> 
-                <p>Final Score: ten out of ten</p>
+                    <p>Final Score: ten out of ten</p>
                 </div>`
     return html;
 }
 function render() {
     let Str = '';
-    if(quizStarted === false) {
+    console.log(store.quizStarted);
+    if(store.quizStarted === false) {
         Str = startScreen();
         $('main').html(Str);
     }
-    if(quizStarted === true && questionNumber > store.questions.length) {
+    if(store.quizStarted === true && store.questionNumber > store.questions.length) {
         Str = endScreen;
         $('main').html(Str);
     }
-    if(quizStarted === true && questionNumber < store.questions.length){
+    if(store.quizStarted === true && store.questionNumber < store.questions.length){
         Str = quizScreen();
         $('main').html(Str);
     }
 }
 
+    render();
 
-
-render();
 
 $('.startButton').submit(function(event) {
-    quizStarted = true;
-    console.log(store.questions[questionNumber].answers[0]);
+    store.quizStarted = true;
+    console.log(store.questions[store.questionNumber].answers[0]);
     render();
+    return false;
+});
+
+$('.pickQuestion').on("submit", function(e) {
+    console.log(questions)
+    e.preventDefault();
+    store.quizStarted = true;
+    store.questionNumber++;
+    render();
+    return false;
 });
