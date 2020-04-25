@@ -1,8 +1,113 @@
-/* Your styles should be mobile-first and responsive */
 
-/** 
-  * If you are unclear on how to utilize a mobile-first, responsive technique to write your CSS, here is an example: 
-  *
-  * https://github.com/andreacardybailey/responsive_example/blob/master/styles/responsive-base.css 
-  *
-*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  text-align: center;
+  margin: auto;
+  background-color: black;
+  color: white;
+}
+.hidden {
+  display: none;
+}
+body {
+}
+header {
+}
+h1 {
+  background-color: gray;
+  font-size: 40px;
+}
+main {
+  border: 1px solid;
+  border-color: green;
+  margin: auto;
+}
+.start-section {
+}
+h2 {
+  font-size: 20px;
+}
+p{
+  background-color: white;
+  color: black;
+}
+button span{
+  background-color: gray;
+}
+strong{
+  background-color: white;
+  color: black;
+}
+.start-button {
+  height: 100px;
+  width: 150px;
+  color: white;
+  font-size: 20px;
+  background-color: gray;
+  border: 2px white solid;
+  border-radius: 25%;
+}
+.question-section {
+}
+.question-answer-container { 
+}
+.question-container {
+  font-size: 30px;
+}
+.answers-container {
+  font-size: 24px;
+  height: 100;
+  width: 100;
+}
+.answer {
+  display: inline-block;
+}
+.status-container {
+}
+.question-circle {
+  background-color: white;
+  display: inline-block;
+  border-radius: 10px;
+  width: 25%;
+  font-size: 18px;
+}
+.score-circle {
+  background-color: white;
+  display: inline-block;
+  border-radius: 10px;
+  width: 25%;
+  font-size: 18px;
+  
+}
+.submit-button {
+  background-color: white;
+  display: inline-block;
+  border-radius: 10px;
+  width: 25%;
+  font-size: 18px;
+}
+.final-section {
+}
+.final-question-answer-container {
+}
+.final-score-container {
+  font-size: 30px;
+}
+.key-answer-container {
+  border-radius: 10px;
+  font-size: 24px;
+}
+.final-status-container {
+}
+.reset-button {
+  height: 100px;
+  width: 150px;
+  color: black;
+  font-size: 20px;
+  background-color: gray;
+  border: 2px white solid;
+  border-radius: 25%;
+}
