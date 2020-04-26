@@ -25,6 +25,15 @@ body{
 header{
   background-color: #454140;
 }
+.bottomBar{
+  height: 50px;
+}
+.score{
+  height: 20px;
+}
+.question{
+  height: 20px;
+}
 h1{
   color:#a79e84;
   margin-top: 0px;
@@ -39,8 +48,6 @@ h2{
 }
 h3{
   margin-top: 20px;
-  display:flex;
-  flex-wrap: wrap;
 }
 p{
   margin-top: 20px;

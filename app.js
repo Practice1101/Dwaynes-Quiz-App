@@ -62,14 +62,14 @@ const store = {
       correctAnswer: 'script'
     },
     {
-      question: 'How do you change this content?',
+      question: 'What tag uses the Lang attribute?',
       answers: [
-        'document.getElementById(“demo”).innerHTML = “Hello World!”;',
-        'document.getElement(“p”).innerHTML = “Hello World!”;',
-        'document.getElementByName(“p”).innerHTML = “Hello World!”;',
-        '#demo.innerHTML = “Hello World!”;'
+        'content',
+        'div',
+        'body',
+        'html'
       ],
-      correctAnswer: 'document.getElementById(“demo”).innerHTML = “Hello World!”;'
+      correctAnswer: 'html'
     },
     {
       question: 'Where is the correct place to insert a JavaScript?',
@@ -111,7 +111,7 @@ const store = {
 function startPage() {
   return `
     <header>
-      <h1>Javascript ,HTML,and CSS Quiz</h1>
+      <h1>Javascript,HTML,and CSS Quiz</h1>
     </header>
     <div>
       <h2>Test your web development knowledge</h2>
@@ -133,7 +133,11 @@ function questionsPage() {
             <input type="radio" class='answer' name='answer' value='${answer2}' required>${answer2}<br />
             <input type="radio" class='answer' name='answer' value='${answer3}' required>${answer3}<br />
             <input type="radio" class='answer' name='answer' value='${answer4}' required>${answer4}<br />
-            <input type='submit' class='submitAnswer'>
+              <div class = 'bottomBar'>
+                <input type='submit' class='submitAnswer'>
+                <div class = 'score'>Score:${store.score}/10</div>
+                <div class = 'question'>Question:${store.questionNumber+1}/10</div>
+              </div>
           </div>
         </form>`;
 }
