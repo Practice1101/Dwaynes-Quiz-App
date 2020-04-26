@@ -1,113 +1,76 @@
 
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
+/* Your styles should be mobile-first and responsive */
+
+/** 
+  * If you are unclear on how to utilize a mobile-first, responsive technique to write your CSS, here is an example: 
+  *
+  * https://github.com/andreacardybailey/responsive_example/blob/master/styles/responsive-base.css 
+  *
+*/
+*{
+  background-color:#454140;
   text-align: center;
-  margin: auto;
-  background-color: black;
-  color: white;
+  margin: 0px;
+  padding: 0px;
+  top: 0px;
+  margin: 0px;
+  color:#a79e84;
+  border: red solid 0px;
+  font-family: "Lucida Console", Courier, monospace;
 }
-.hidden {
-  display: none;
+body{
+  background-color:#454140 ;
 }
-body {
+header{
+  background-color: #454140;
 }
-header {
-}
-h1 {
-  background-color: gray;
-  font-size: 40px;
-}
-main {
-  border: 1px solid;
-  border-color: green;
-  margin: auto;
-}
-.start-section {
-}
-h2 {
-  font-size: 20px;
-}
-p{
-  background-color: white;
-  color: black;
-}
-button span{
-  background-color: gray;
-}
-strong{
-  background-color: white;
-  color: black;
-}
-.start-button {
-  height: 100px;
-  width: 150px;
-  color: white;
-  font-size: 20px;
-  background-color: gray;
-  border: 2px white solid;
-  border-radius: 25%;
-}
-.question-section {
-}
-.question-answer-container { 
-}
-.question-container {
-  font-size: 30px;
-}
-.answers-container {
-  font-size: 24px;
-  height: 100;
-  width: 100;
-}
-.answer {
-  display: inline-block;
-}
-.status-container {
-}
-.question-circle {
-  background-color: white;
-  display: inline-block;
-  border-radius: 10px;
-  width: 25%;
-  font-size: 18px;
-}
-.score-circle {
-  background-color: white;
-  display: inline-block;
-  border-radius: 10px;
-  width: 25%;
-  font-size: 18px;
+h1{
+  color:#a79e84;
+  margin-top: 0px;
+  background-color: #454140 ;
   
 }
-.submit-button {
-  background-color: white;
-  display: inline-block;
-  border-radius: 10px;
-  width: 25%;
+h2{
+  color:#bd5734;
+  margin-top: 0px;
+  padding-top: 10px;
   font-size: 18px;
 }
-.final-section {
+h3{
+  margin-top: 20px;
 }
-.final-question-answer-container {
+p{
+  margin-top: 20px;
 }
-.final-score-container {
-  font-size: 30px;
+div{
+  height: 200px;
 }
-.key-answer-container {
-  border-radius: 10px;
-  font-size: 24px;
+button{
+  margin-top: 35px;
+  background-color: #7a3b2e; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  align-self: baseline;
 }
-.final-status-container {
+.nextQuestion{
+  margin-top: 10px
 }
-.reset-button {
-  height: 100px;
-  width: 150px;
-  color: black;
-  font-size: 20px;
-  background-color: gray;
-  border: 2px white solid;
-  border-radius: 25%;
+input{
+  margin-top: 10px;
+  background-color: #7a3b2e; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.finalMessage{
+  margin-top: 30px;
 }

@@ -1,83 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Quiz App</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"
+        type="text/css" />
     <link href="app.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-    <!--Title with its subtitle-->
-    <header>
-        <h1>
-            JS,HTML,and CSS Quiz
-        </h1>
-    </header>
-    <main>
-        <!--Start Section-->
-        <section class='start-section'>
-            <h2>How familiar with web design are you?</h2>
-            <button class='start-button' type="button">Start Quiz</button>
-        </section>
-
-        <!--Question Section-->
-        <section class='question-section'>
-            <div class='question-answer-container'>
-                <!--question container-->
-                <div class='question-container'>
-                    <h3 class='question'>Question Default</h3>
-                </div>
-
-                <!--Answers container-->
-                <div class='answers-container'>
-                    <input class='answer' type="radio" name='answer' value='0' required>answer1<br />
-                    <input class='answer' type="radio" name='answer' value='1' required>answer2<br />
-                    <input class='answer' type="radio" name='answer' value='2' required>answer3<br />
-                    <input class='answer' type="radio" name='answer' value='3' required>answer4<br />
-                </div>
-            </div>
-
-            <!--Status container-->
-            <div class='status-container'>
-                <!--Question Circle-->
-                <div class='question-circle'>
-                    <p class='question-status'>Question 0/10</p>
-                </div>
-                <!--Score Circle-->
-                <div class='score-circle'>
-                    <p>Score zero 0/10</p>
-                </div>
-                <!--Submit button-->
-                <button class='submit-button' type="button">Submit</button>
-            </div>
-        </section>
-
-        <!--Final Section-->
-        <section class='final-section'>
-            <div class='final-question-answer-container'>
-                <!--final score container-->
-                <div class='final-score-container'>
-                    <p>Final Score: 0/10</p>
-                </div>
-                <!--key answers container-->
-                <div class='key-answers-container'>
-                    <p class='key-answer-question'>Question</p>
-                    <p class='key-answer-answer'><strong>Correct Answer: </strong>Correct Answer</p>
-                </div> 
-            </div>
-            <!-- final status container-->
-            <div class='reset-button-container'>
-                <button class='reset-button'>Try Again</button>
-            </div>
-        </section>
+    <main class='quiz'>
     </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
 </body>
-<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous">
-
-
-</script>
-<script src="app.js"></script>
 
 </html>
