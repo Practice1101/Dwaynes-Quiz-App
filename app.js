@@ -1,106 +1,106 @@
 'use strict';
 const store = {
   questions: [
-      {
-        question: 'What does HTML stand for?',
-        answers: [
-          'Home Tool Markup Language',
-          'Hyper Text Markup Language',
-          'Hyperlinks and Text Markup Language',
-          'Homogenus Text Make-Up Language'
-        ],
-          correctAnswer: 'Hyper Text Markup Language'
-      },
-      {
-        question: 'Who is making the Web standards?',
-        answers: [
-          'The World Wide Web Consortium',
-          'Google',
-          'Microsoft',
-          'Mozilla'
-        ],
-        correctAnswer: 'The World Wide Web Consortium'
-      },
-      {
-        question: 'What is the correct HTML element for the largest heading?',
-        answers: [
-          'h1',
-          'h6',
-          'head',
-          'heading'
-        ],
-        correctAnswer: 'h1'
-      },
-      {
-        question: 'What is the correct HTML element for inserting a line break?',
-        answers: [
-          'break',
-          'lb',
-          'br',
-          'hr'
-        ],
-        correctAnswer: 'br'
-      },
-      {
-        question: 'What is the correct CSS for adding a background color?',
-        answers: [
-          'yellow',
-          'bg=”yellow”',
-          'background-color:yellow;',
-          'bg style = color:yellow'
-        ],
-        correctAnswer: 'background-color:yellow;'
-      },
-      {
-        question: 'Inside which HTML element do we put the JavaScript?',
-        answers: [
-          'scripting',
-          'javascript',
-          'script',
-          'js'
-        ],
-        correctAnswer: 'script'
-      },
-      {
-        question: 'How do you change this content?',
-        answers: [
-          'document.getElementById(“demo”).innerHTML = “Hello World!”;',
-          'document.getElement(“p”).innerHTML = “Hello World!”;',
-          'document.getElementByName(“p”).innerHTML = “Hello World!”;',
-          '#demo.innerHTML = “Hello World!”;'
-        ],
-        correctAnswer: 'document.getElementById(“demo”).innerHTML = “Hello World!”;'
-      },
-      {
-        question: 'Where is the correct place to insert a JavaScript?',
-        answers: [
-          'The body section',
-          'Both the head and the body',
-          'The head section',
-          'The CSS page'
-        ],
-        correctAnswer: 'Both the head and the body'
-      },
-      {
-        question: 'What is the correct syntax for referring to an external script called “xxx.js”?',
-        answers: [
-          'script href=”xxx.js”',
-          'script src=”xxx.js”',
-          'script name=”xxx.js”',
-          'script alt=”xxx.js”'
-        ],
-        correctAnswer: 'script src=”xxx.js”'
-      },
-      {
-        question: 'How do you write “Hello World” in an alert box?',
-        answers: [
-          'alert(“Hello World”);',
-          'msg(“Hello World”);',
-          'alertBox(“Hello World”);',
-          'msgBox(“Hello World”);'
-        ],
-        correctAnswer: 'alert(“Hello World”);'
-      },
+    {
+      question: 'What does HTML stand for?',
+      answers: [
+        'Home Tool Markup Language',
+        'Hyper Text Markup Language',
+        'Hyperlinks and Text Markup Language',
+        'Homogenus Text Make-Up Language'
+      ],
+      correctAnswer: 'Hyper Text Markup Language'
+    },
+    {
+      question: 'Who is making the Web standards?',
+      answers: [
+        'The World Wide Web Consortium',
+        'Google',
+        'Microsoft',
+        'Mozilla'
+      ],
+      correctAnswer: 'The World Wide Web Consortium'
+    },
+    {
+      question: 'What is the correct HTML element for the largest heading?',
+      answers: [
+        'h1',
+        'h6',
+        'head',
+        'heading'
+      ],
+      correctAnswer: 'h1'
+    },
+    {
+      question: 'What is the correct HTML element for inserting a line break?',
+      answers: [
+        'break',
+        'lb',
+        'br',
+        'hr'
+      ],
+      correctAnswer: 'br'
+    },
+    {
+      question: 'What is the correct CSS for adding a background color?',
+      answers: [
+        'yellow',
+        'bg=”yellow”',
+        'background-color:yellow;',
+        'bg style = color:yellow'
+      ],
+      correctAnswer: 'background-color:yellow;'
+    },
+    {
+      question: 'Inside which HTML element do we put the JavaScript?',
+      answers: [
+        'scripting',
+        'javascript',
+        'script',
+        'js'
+      ],
+      correctAnswer: 'script'
+    },
+    {
+      question: 'How do you change this content?',
+      answers: [
+        'document.getElementById(“demo”).innerHTML = “Hello World!”;',
+        'document.getElement(“p”).innerHTML = “Hello World!”;',
+        'document.getElementByName(“p”).innerHTML = “Hello World!”;',
+        '#demo.innerHTML = “Hello World!”;'
+      ],
+      correctAnswer: 'document.getElementById(“demo”).innerHTML = “Hello World!”;'
+    },
+    {
+      question: 'Where is the correct place to insert a JavaScript?',
+      answers: [
+        'The body section',
+        'Both the head and the body',
+        'The head section',
+        'The CSS page'
+      ],
+      correctAnswer: 'Both the head and the body'
+    },
+    {
+      question: 'What is the correct syntax for referring to an external script called “xxx.js”?',
+      answers: [
+        'script href=”xxx.js”',
+        'script src=”xxx.js”',
+        'script name=”xxx.js”',
+        'script alt=”xxx.js”'
+      ],
+      correctAnswer: 'script src=”xxx.js”'
+    },
+    {
+      question: 'How do you write “Hello World” in an alert box?',
+      answers: [
+        'alert(“Hello World”);',
+        'msg(“Hello World”);',
+        'alertBox(“Hello World”);',
+        'msgBox(“Hello World”);'
+      ],
+      correctAnswer: 'alert(“Hello World”);'
+    },
   ],
   quizStarted: false,
   questionNumber: 0,
@@ -124,7 +124,7 @@ function questionsPage() {
   let answer3 = store.questions[store.questionNumber].answers[2];
   let answer4 = store.questions[store.questionNumber].answers[3];
   let currentQuestion = store.questions[store.questionNumber].question;
-return `<header class = 'filler'>
+  return `<header class = 'filler'>
         </header>
         <form id = 'questionsForm'>
           <h2>${currentQuestion}</h2>
@@ -136,24 +136,24 @@ return `<header class = 'filler'>
             <input type='submit' class='submitAnswer'>
           </div>
         </form>`;
-      }
+}
 function submissionPage() {
   let thisVeracity = ''
-  if(store.veracity === true){
+  if (store.veracity === true) {
     thisVeracity = 'Correct!';
-  }else if(store.veracity === false){
+  } else if (store.veracity === false) {
     thisVeracity = 'Incorrect'
   }
-  let str =  `<div>
+  let str = `<div class="boxes">
                 <h2>${thisVeracity}</h2>
-              <div>`;
-  if(thisVeracity === 'Correct!'){
-    str += `<div>
+              </div>`;
+  if (thisVeracity === 'Correct!') {
+    str += `<div class="boxes">
               <button class='nextQuestion'>Next Question</button>
             </div>`;
-  }else if(thisVeracity === 'Incorrect'){
+  } else if (thisVeracity === 'Incorrect') {
     str += `<h3 class = 'correctAnswer'>The correct answer is: <br>${store.questions[store.questionNumber].correctAnswer}</h3>
-            <div>
+            <div class="boxes">
               <button class='nextQuestion'>Next Question</button>
             </div>`;
   }
@@ -199,17 +199,17 @@ function clickSubmitButton() {
     event.preventDefault();
     let rightAnswer = store.questions[store.questionNumber].correctAnswer;
     let selectedOption = $('input[name=answer]:checked', '#questionsForm').val();
-    if(selectedOption === undefined){
+    if (selectedOption === undefined) {
       renderQuestionsPage();
       alert('Please select one of the options');
-    }else if (selectedOption === rightAnswer) {
+    } else if (selectedOption === rightAnswer) {
       store.veracity = true;
       store.score++;
       renderSubmissionPage();
-    }else if(selectedOption !== rightAnswer && selectedOption !== undefined) {
+    } else if (selectedOption !== rightAnswer && selectedOption !== undefined) {
       store.veracity = false;
       renderSubmissionPage();
-}
+    }
   })
 }
 function clickNextQuestion() {

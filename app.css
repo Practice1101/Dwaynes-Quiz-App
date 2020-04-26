@@ -15,8 +15,9 @@
   top: 0px;
   margin: 0px;
   color:#a79e84;
-  border: red solid 0px;
+  /* border: red solid 1px; */
   font-family: "Lucida Console", Courier, monospace;
+  box-sizing: border-box;
 }
 body{
   background-color:#454140 ;
@@ -38,6 +39,8 @@ h2{
 }
 h3{
   margin-top: 20px;
+  display:flex;
+  flex-wrap: wrap;
 }
 p{
   margin-top: 20px;
@@ -73,4 +76,23 @@ input{
 }
 .finalMessage{
   margin-top: 30px;
+}
+
+.quiz {
+  border: 5px solid #bd5734;
+margin-top:33%;
+padding:5%;
+height: 400px;
+width:90%;
+margin-left:auto;
+margin-right:auto;
+}
+
+/* .radios{
+  display:flex;
+  flex-wrap: wrap;
+} */
+
+.boxes{
+ height:100px;
 }
