@@ -110,11 +110,9 @@ const store = {
 /********** TEMPLATE GENERATION FUNCTIONS **********/
 function startPage() {
   return `
-    <header>
-      <h1>Javascript,HTML,and CSS Quiz</h1>
-    </header>
+    
     <div>
-      <h2>Test your web development knowledge</h2>
+      <h2 id = 'displayH2'>Test your<br>Web Development knowledge</h2>
       <button class='startQuiz'>Start Quiz</button>
     </div>`;
 }
@@ -127,18 +125,18 @@ function questionsPage() {
   return `<header class = 'filler'>
         </header>
         <form id = 'questionsForm'>
-          <h2>${currentQuestion}</h2>
+            <h2 = 'currentQuestion'>${currentQuestion}</h2>
           <div class = 'radios'>
             <input type="radio" class='answer' name='answer' value='${answer1}' required>${answer1}<br />
             <input type="radio" class='answer' name='answer' value='${answer2}' required>${answer2}<br />
             <input type="radio" class='answer' name='answer' value='${answer3}' required>${answer3}<br />
             <input type="radio" class='answer' name='answer' value='${answer4}' required>${answer4}<br />
+          </div> 
               <div class = 'bottomBar'>
                 <input type='submit' class='submitAnswer'>
                 <div class = 'score'>Score:${store.score}/10</div>
                 <div class = 'question'>Question:${store.questionNumber+1}/10</div>
               </div>
-          </div>
         </form>`;
 }
 function submissionPage() {
@@ -187,7 +185,7 @@ function renderSubmissionPage() {
   $('.quiz').html(submission);
 }
 function renderFinalPage() {
-  const end = finalPage;
+  const end = finalPage();
   $('.quiz').html(end);
 }
 /********** EVENT HANDLER FUNCTIONS **********/
