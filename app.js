@@ -110,34 +110,31 @@ const store = {
 /********** TEMPLATE GENERATION FUNCTIONS **********/
 function startPage() {
   return `
-    
-    <div>
-      <h2 id = 'displayH2'>Test your<br>Web Development knowledge</h2>
-      <button class='startQuiz'>Start Quiz</button>
-    </div>`;
+        <div id = 'startPageContainer'>
+          <h2 id = 'displayH2'>Test your<br>Web Development knowledge</h2>
+          <button class='startQuiz'>Start Quiz</button>`;
 }
+      
 function questionsPage() {
   let answer1 = store.questions[store.questionNumber].answers[0];
   let answer2 = store.questions[store.questionNumber].answers[1];
   let answer3 = store.questions[store.questionNumber].answers[2];
   let answer4 = store.questions[store.questionNumber].answers[3];
   let currentQuestion = store.questions[store.questionNumber].question;
-  return `<header class = 'filler'>
-        </header>
-        <form id = 'questionsForm'>
-            <h2 = 'currentQuestion'>${currentQuestion}</h2>
-          <div class = 'radios'>
-            <input type="radio" class='answer' name='answer' value='${answer1}' required>${answer1}<br />
-            <input type="radio" class='answer' name='answer' value='${answer2}' required>${answer2}<br />
-            <input type="radio" class='answer' name='answer' value='${answer3}' required>${answer3}<br />
-            <input type="radio" class='answer' name='answer' value='${answer4}' required>${answer4}<br />
-          </div> 
-              <div class = 'bottomBar'>
-                <input type='submit' class='submitAnswer'>
-                <div class = 'score'>Score:${store.score}/10</div>
-                <div class = 'question'>Question:${store.questionNumber+1}/10</div>
-              </div>
-        </form>`;
+  return `<form id = 'questionsForm'>
+            <h2 id = 'currentQuestion'>${currentQuestion}</h2>
+            <div id = 'radios'>
+              <input type="radio" class='answer' name='answer' value='${answer1}' required>${answer1}<br />
+              <input type="radio" class='answer' name='answer' value='${answer2}' required>${answer2}<br />
+              <input type="radio" class='answer' name='answer' value='${answer3}' required>${answer3}<br />
+              <input type="radio" class='answer' name='answer' value='${answer4}' required>${answer4}<br />
+            </div>   
+          </form>
+          <div class = 'bottomBar'>
+            <input type='submit' class='submitAnswer'>
+            <div class = 'score'>Score:${store.score}/10</div>
+            <div class = 'question'>Question:${store.questionNumber+1}/10</div>
+          </div>`;
 }
 function submissionPage() {
   let thisVeracity = ''
@@ -163,13 +160,11 @@ function submissionPage() {
 };
 function finalPage() {
   return `
-    <div>
-        <h2>End of Quiz</h2>
-        <div>
-          <p class = 'finalMessage'>You answered ${store.score} of ${store.questions.length} correctly.</p>
-          <button class='startOver'>Try Again?</button>
-        </div>
-    </div>`;
+      <h2>End of Quiz</h2>
+      <div>
+        <p class = 'finalMessage'>You answered ${store.score} of ${store.questions.length} correctly.</p>
+        <button class='startOver'>Try Again?</button>
+      </div>`;
 }
 /********** RENDER FUNCTION(S) **********/
 function renderStartPage() {
